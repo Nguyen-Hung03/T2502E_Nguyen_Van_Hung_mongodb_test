@@ -52,10 +52,9 @@ async function main() {
         console.log(`6. Tổng giá trị tất cả đơn hàng (Total Amount): ${grandTotal}`);
 
         // 7. Count total product_id equal "somi" and show to screen
-        // Cách này đếm số lượng đơn hàng có chứa "somi"
         const countSomi = await collection.countDocuments({ "products.product_id": "somi" });
         console.log(`7. Số lượng đơn hàng có chứa sản phẩm "somi": ${countSomi}`);
-        
+
     } catch (err) {
         console.error("Lỗi thực thi:", err);
     } finally {
